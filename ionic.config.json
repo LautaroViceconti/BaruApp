@@ -1,0 +1,7 @@
+{
+  "name": "Baru-Bags",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
