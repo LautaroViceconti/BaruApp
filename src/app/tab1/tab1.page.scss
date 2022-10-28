@@ -2,3 +2,9 @@ ion-card-header.ios {
     display: flex;
     flex-flow: column-reverse;
   }
+
+div {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
