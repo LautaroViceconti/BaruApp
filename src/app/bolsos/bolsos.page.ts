@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-bolsos',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BolsosPage implements OnInit {
 
-  constructor() { }
+  constructor(private menuCtrl:MenuController) {}
 
   ngOnInit() {
   }
+
+  onClick(){
+    this.menuCtrl.toggle()
+  }
+
 
 }

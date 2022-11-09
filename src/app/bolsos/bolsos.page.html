@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Bolsos</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
 
+ 
+
+    
+
+    <ion-fab (click)="onClick()" vertical="top" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="menu-outline"></ion-icon>
+      </ion-fab-button>  
+    </ion-fab>
+
+  
+
+  <h5 style="position:relative; left:30px; top:13px" > Bolsos </h5>
+ 
+
 </ion-content>
+
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button [routerLink]="['/tabs/tab1']" tab="tab1">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/tabs/tab2']" tab="tab2">
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/tabs/tab3']" tab="tab3">
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+
+</ion-tabs>

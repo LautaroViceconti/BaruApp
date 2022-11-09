@@ -1,9 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>summercollection</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
+
+  <ion-fab (click)="onClick()" vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-fab-button>  
+  </ion-fab>
+
+  <ion-fab [routerLink]="['/tabs/tab1']" vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-fab-button>  
+  </ion-fab>
+
+ 
+    <img src="../../assets/fotos/colection.jpeg">
+
+  <div style="position:relative; top:15px" > 
+    <img src="../../assets/fotos/Framecolection1.png">
+    <img src="../../assets/fotos/Framecolection2.png">
+    <img src="../../assets/fotos/Framecolection3.png">
+    <img src="../../assets/fotos/Framecolection4.png">
+    
+  </div>
+  
+  
+  
+
 
 </ion-content>

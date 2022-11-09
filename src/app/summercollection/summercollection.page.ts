@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController} from '@ionic/angular';
 
 @Component({
   selector: 'app-summercollection',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./summercollection.page.scss'],
 })
 export class SummercollectionPage implements OnInit {
+  [x: string]: any;
 
-  constructor() { }
+  constructor(private menuCtrl:MenuController) {}
 
   ngOnInit() {
   }
 
+
+  onClick(){
+    this.menuCtrl.toggle()
+  }
 }
