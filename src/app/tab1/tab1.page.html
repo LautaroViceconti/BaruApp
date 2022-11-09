@@ -32,6 +32,7 @@
     <img src="../../assets/fotos/Frame 1.png"
     width="45%"
     height="45%"
+    
     >
 
     
@@ -60,6 +61,8 @@
     width="45%"
     height="45%"
     >
+    
+
 
  </div>
 
@@ -69,7 +72,7 @@
 
     <div style="position:relative; left:20px; top:0px"> 
     
-      <img src="../../assets/fotos/image 19.png"
+      <img [routerLink]="['/summercollection']" src="../../assets/fotos/image 19.png"
       width="90%"
       height="100%"
       >
@@ -83,9 +86,28 @@
  
 
 
+
   <div style="position:relative; left:32px">
     <h5> Shop by Category </h5>
   </div>
+
+  <div style="position:relative; left:5px;">
+    <img [routerLink]="['/rinoneras']" src="../../assets/fotos/category1.png">
+    <img [routerLink]="['/mochilas']" src="../../assets/fotos/category2.png">
+    <img [routerLink]="['/bolsos']" src="../../assets/fotos/category3.png">
+
+  </div>
+
+  <div  style="position:relative; left:5px;" >
+    <img [routerLink]="['/bandoleras']" src="../../assets/fotos/category4.png">
+    <img [routerLink]="['/materas']" src="../../assets/fotos/category5.png">
+    <img [routerLink]="['/billeteras']" src="../../assets/fotos/category6.png">
+  </div>
+
+
+
+
+
 
   <div style="position:relative; left:32px">
     <h5> Best Sellers </h5>

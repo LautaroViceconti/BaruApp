@@ -1,43 +1,36 @@
 <ion-app>
   <ion-menu side="end" contentId="main-content">
   
-    <ion-content 
-    
-    class="ion-padding">
+    <ion-content class="ion-padding">
     
     <div style="position:relative; top:220px">
-      <h3> Riñoneras </h3>
+      <h3 [routerLink]="['/rinoneras']"> Riñoneras </h3>
+      
     </div>
 
     <div style="position:relative; top:240px">
-      <h3> Mochilas </h3>
+      <h3 [routerLink]="['/mochilas']" > Mochilas </h3>
     </div>
 
     <div style="position:relative; top:260px">
-      <h3> Bolsos </h3>
+      <h3 [routerLink]="['/bolsos']"> Bolsos </h3>
     </div>
 
     <div style="position:relative; top:280px">
-      <h3> Bandoleras </h3>
+      <h3  [routerLink]="['/bolsos']" > Bandoleras </h3>
     </div>
 
     <div style="position:relative; top:300px">
-      <h3> Materas </h3>
+      <h3  [routerLink]="['/materas']" > Materas </h3>
     </div>
 
     <div style="position:relative; top:320px">
-      <h3> Billeteras </h3>
+      <h3  [routerLink]="['/billeteras']" > Billeteras </h3>
     </div>
   
-    
-    
-    
-
-
-
-
     </ion-content>
   </ion-menu>
+
   <div class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar>
