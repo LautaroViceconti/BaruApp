@@ -15,8 +15,40 @@
 
   <h5 style="position:relative; left:30px; top:13px" > Bandoleras </h5>
  
+  <div *ngFor="let producto of productos"> 
+    
+    <div   > 
+      <ion-card 
+      *ngFor="let producto of productos"
+      style="position:relative; top:20px">
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-thumbnail slot="start">
+                <img alt={{producto.nombre}} src={{producto.imagengrupo}} />
+              </ion-thumbnail>
+              <ion-label>{{producto.nombre}}</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      
+    </div>
+  </div>
+
+  <h1> </h1>
+  <h1> </h1>
+  
+  
+
+
+
 
 </ion-content>
+
+
+
+
 
 <ion-tabs>
 

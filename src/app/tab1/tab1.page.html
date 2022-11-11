@@ -24,48 +24,28 @@
 
   <div style="position:relative; left:0px"> 
     
-    <img id="open-modal1" expand="block" src="../../assets/fotos/Frame 1.png"
-    width="45%"
-    height="45%"
-    
-    >
-
-    
-    <img id="open-modal2" expand="block" src="../../assets/fotos/Frame 2.png"
-    width="45%"
-    height="45%"
-    >
-
-    
-    <img id="open-modal3" expand="block" src="../../assets/fotos/Frame 3.png"
-    width="45%"
-    height="45%"
-    >
-
-    <img id="open-modal4" expand="block" src="../../assets/fotos/Frame 4.png"
-    width="45%"
-    height="45%"
-    >
-
-    <img id="open-modal5" expand="block" src="../../assets/fotos/Frame 5.png"
-    width="45%"
-    height="45%"
-    >
-
-    <img id="open-modal6" expand="block" src="../../assets/fotos/Frame 8.png"
-    width="45%"
-    height="45%"
-    >
+    <img  
+    *ngFor="let producto of productos"
+      src={{producto.imagen}}
+      width="45%"
+      height="45%"
+      alt={{producto.titulo}}
+      id={{producto.id}} expand="block"
+    />
 
  </div>
 
- <ion-modal  #modal trigger="open-modal1" [initialBreakpoint]="0.90" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
+ <div *ngFor="let producto of productos"> 
+  <ion-modal  #modal trigger={{producto.id}} [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
   <ng-template>
     <ion-content>
-    <img style="position:relative; top:80px; left:8px;" src="../../assets/fotos/group1.png">
-    <h5 style="position:relative; top:20px; left:23px;"> Riñonera First </h5>
-    <h8 style="color:grey; position: relative;top:40px;left: 23px; ;"> Para todos los días </h8>
-    <h5 style="position:relative; top:60px; left:23px;"> ARS $8.000 </h5> 
+    
+      <img style="position:center; " src={{producto.imagengrupo}}>
+     
+      
+    <h5 style="position:relative; top:20px; left:23px;"> {{producto.nombre}} </h5>
+    <h8 style="color:grey; position: relative;top:40px;left: 23px; ;"> {{producto.descripcion}} </h8>
+    <h5 style="position:relative; top:60px; left:23px;"> ARS ${{producto.precio}}</h5> 
     <ion-fab vertical= "center" horizontal="end" slot="fixed">
       <ion-fab-button>
         <ion-icon name="cart-outline"></ion-icon>
@@ -80,26 +60,7 @@
 
 
  </ion-modal>
-
- <ion-modal  #modal trigger="open-modal2" [initialBreakpoint]="0.90" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
-
-</ion-modal>
-
-<ion-modal  #modal trigger="open-modal3" [initialBreakpoint]="0.90" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
-
-</ion-modal>
-
-<ion-modal  #modal trigger="open-modal4" [initialBreakpoint]="0.90" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
-
-</ion-modal>
-
-<ion-modal  #modal trigger="open-modal5" [initialBreakpoint]="0.90" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
-
-</ion-modal>
-
-<ion-modal  #modal trigger="open-modal6" [initialBreakpoint]="0.90" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
-
-</ion-modal>
+</div>
 
  
 
@@ -116,13 +77,7 @@
 
     </div>
     
-      
     
-    
-  
- 
-
-
 
   <div style="position:relative; left:32px">
     <h5> Shop by Category </h5>
@@ -203,15 +158,22 @@
   
   <div style="position:relative; left:20px"> 
     
+    
+
     <img src="../../assets/fotos/image 18.png"
     width="90%"
     height="100%"
     >
 
+    
+
   </div>
   
   
-
-
+  <h1> </h1>
+  
+  
+  
  
+
 </ion-content>

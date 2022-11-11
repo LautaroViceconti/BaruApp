@@ -14,10 +14,8 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
-  {
-    path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
-  },
+  
+  
   {
     path: 'rinoneras',
     loadChildren: () => import('./rinoneras/rinoneras.module').then( m => m.RinonerasPageModule)
@@ -41,7 +39,12 @@ const routes: Routes = [
   {
     path: 'billeteras',
     loadChildren: () => import('./billeteras/billeteras.module').then( m => m.BilleterasPageModule)
-  }
+  },
+  {
+    path: 'todas-categorias',
+    loadChildren: () => import('./todas-categorias/todas-categorias.module').then( m => m.TodasCategoriasPageModule)
+  },
+  
 ];
 @NgModule({
   imports: [
