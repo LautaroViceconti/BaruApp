@@ -2,9 +2,76 @@
 
 <ion-content [fullscreen]="true">
   
-  <div style="position:relative; left:32px">
+  <div style="position:relative; left:32px; top:30px">
     <h5> Tu carrito </h5>
   </div>
+
+  <div> 
+    <ion-card style="position:relative; top:20px">
+      
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img id="cartimage" alt="Error" src="http://localhost:8100/assets/fotos/imagen3.png" />
+            </ion-thumbnail>
+          
+              <ion-label> Tote Pop </ion-label>
+              <ion-label> $11.400</ion-label>
+           
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div> 
+    <ion-card 
+    
+    style="position:relative; top:20px">
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img id="cartimage" alt="Error" src="http://localhost:8100/assets/fotos/imagen4.png" />
+            </ion-thumbnail>
+            <ion-label> Mochi Pop </ion-label>
+            <ion-label> $16.900</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div style="position:relative; left:32px; top:30px">
+    <h5> Total: $28.300 </h5>
+  </div>
+
+  <div style="position:relative;left:13px; top:300px"> 
+   <img id="open-modal" expand="block" src="http://localhost:8100/assets/fotos/checkout.png">
+  </div>
+  <h2 style="color:white; position:relative ;left:145px; top:235px"> Checkout </h2>
+
+  <div> 
+    
+      
+      <ion-modal #modal trigger="open-modal">
+        <ng-template>
+          <ion-content>
+            
+            <ion-fab vertical= "start" horizontal="center" slot="fixed">
+              <ion-fab-button color="success" >
+                <ion-icon name="checkmark-outline"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+            
+            <h1 style="position:relative;top:300px;left:115px"> Pago Exitoso! </h1>
+            
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    
+  </div> 
 
   
 </ion-content>

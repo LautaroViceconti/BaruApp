@@ -5,16 +5,29 @@
   
       
   
-    <ion-fab (click)="onClick()" vertical="top" horizontal="end" slot="fixed">
-      <ion-fab-button>
-        <ion-icon name="menu-outline"></ion-icon>
-      </ion-fab-button>  
-    </ion-fab>
+   
 
 
 
   <h5 style="position:relative; left:30px; top:13px" > Materas </h5>
  
+
+  <div> 
+    <ion-card 
+    *ngFor="let producto of matera"
+    style="position:relative; top:20px">
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img alt={{producto.nombre}} src={{producto.imagengrupo}} />
+            </ion-thumbnail>
+            <ion-label>{{producto.nombre}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
 </ion-content>
 

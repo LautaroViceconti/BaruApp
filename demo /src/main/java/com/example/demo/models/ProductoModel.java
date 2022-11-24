@@ -18,6 +18,9 @@ public class ProductoModel {
     private String categoria;
     private String imagen;
     private String imagengrupo;
+    private boolean nuevo;
+    private boolean bestSellers;
+    private boolean miCarrito;
 
     public Long getId() {
         return id;
@@ -78,4 +81,28 @@ public class ProductoModel {
     public void setImagengrupo(String imagengrupo) {
         this.imagengrupo = imagengrupo;
     }
+
+  public boolean isNuevo() {
+    return nuevo;
+  }
+
+  public void setNuevo(boolean nuevo) {
+    this.nuevo = nuevo;
+  }
+
+  public boolean isBestSellers() {
+    return bestSellers;
+  }
+
+  public void setBestSellers(boolean bestSellers) {
+    this.bestSellers = bestSellers;
+  }
+
+  public boolean isMiCarrito() {
+    return miCarrito;
+  }
+
+  public void setMiCarrito(boolean miCarrito) {
+    this.miCarrito = miCarrito;
+  }
 }

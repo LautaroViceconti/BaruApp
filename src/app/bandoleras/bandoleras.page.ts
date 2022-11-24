@@ -12,6 +12,7 @@ export class BandolerasPage implements OnInit {
   constructor(private menuCtrl:MenuController, private productoService: ProductosService, productosService:ProductosService) {}
 
   productos = []
+  bandolera = []
 
   ngOnInit() {
     this.getProductos()
@@ -20,6 +21,11 @@ export class BandolerasPage implements OnInit {
   async getProductos(){
     this.productos = await this.productoService.getProductos()
      console.table(this.productos)
+     this.bandolera = this.getBandolera("Bandolera");
+    }
+
+    getBandolera(categoria : string){ 
+      return this.productos.filter((Producto)=>Producto.categoria === categoria)
     }
 
   onClick(){

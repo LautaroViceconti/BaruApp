@@ -16,6 +16,8 @@ export class Tab1Page implements OnInit {
     public alertController: AlertController, productosService:ProductosService ) {}
 
   productos = []
+  Nuevo = []
+  BestSeller = []
   
 
   onClick(){
@@ -27,11 +29,20 @@ export class Tab1Page implements OnInit {
   }
 
   async getProductos(){
-    this.productos = await this.productoService.getProductos()
-     console.table(this.productos)
+    this.productos = await this.productoService.getProductos();
+     console.table(this.productos);
+     this.Nuevo = this.getNuevo();
+     this.BestSeller = this.getBestSeller();
     }
 
 
+    getNuevo(){ 
+      return this.productos.filter((producto)=>producto.nuevo === true)
+    }
+
+    getBestSeller(){ 
+      return this.productos.filter((producto)=>producto.bestSellers === true)
+    }
   
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { ProductosService } from '../core/service/productos.service';
 
 @Component({
   selector: 'app-bolsos',
@@ -8,14 +9,25 @@ import { MenuController } from '@ionic/angular';
 })
 export class BolsosPage implements OnInit {
 
-  constructor(private menuCtrl:MenuController) {}
+  constructor(private menuCtrl:MenuController, private productoService: ProductosService, productosService:ProductosService) {}
+
+  productos = []
+  bolso = []
 
   ngOnInit() {
+    this.getProductos()
   }
 
-  onClick(){
-    this.menuCtrl.toggle()
-  }
+  async getProductos(){
+    this.productos = await this.productoService.getProductos()
+     console.table(this.productos)
+     this.bolso = this.getBolso("Bolso");
+    }
 
-
+    getBolso(categoria : string){ 
+      return this.productos.filter((Producto)=>Producto.categoria === categoria)
+    }
 }
+
+
+

@@ -1,25 +1,13 @@
 
 <ion-content>
 
-  
-
-    
-
-    <ion-fab (click)="onClick()" vertical="top" horizontal="end" slot="fixed">
-      <ion-fab-button>
-        <ion-icon name="menu-outline"></ion-icon>
-      </ion-fab-button>  
-    </ion-fab>
-
-
 
   <h5 style="position:relative; left:30px; top:13px" > Bandoleras </h5>
  
-  <div *ngFor="let producto of productos"> 
-    
-    <div   > 
+ 
+    <div> 
       <ion-card 
-      *ngFor="let producto of productos"
+      *ngFor="let producto of bandolera"
       style="position:relative; top:20px">
         <ion-card-content>
           <ion-list>
@@ -34,7 +22,7 @@
       </ion-card>
       
     </div>
-  </div>
+  
 
   <h1> </h1>
   <h1> </h1>

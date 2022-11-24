@@ -1,0 +1,42 @@
+#cartimage {
+  
+    position: relative;
+    top:-6px;
+    left: -15px;
+    width:140%;
+    height:130%
+  }
+
+  ion-modal {
+    --height: 50%;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  
+  ion-modal::part(backdrop) {
+    background: rgba(209, 213, 219);
+    opacity: 1;
+  }
+  
+  ion-modal ion-toolbar {
+    --background: rgb(161, 164, 165);
+    --color: white;
+  }
+
+   
+  ion-fab-button {
+    width: 200px;
+    height: 200px;
+    position: relative; 
+    top:90px
+ }
+ 
+ .fab-horizontal-center {
+    margin-left: unset;
+    margin-inline-start: -100px ;
+ }
+
+ ion-icon{
+    width: 100px;
+    height: 100px;
+ }

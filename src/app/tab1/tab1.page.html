@@ -25,42 +25,16 @@
   <div style="position:relative; left:0px"> 
     
     <img  
-    *ngFor="let producto of productos"
+    *ngFor="let producto of Nuevo"
       src={{producto.imagen}}
       width="45%"
       height="45%"
-      alt={{producto.titulo}}
+      alt={{producto.nombre}}
       id={{producto.id}} expand="block"
     />
 
  </div>
 
- <div *ngFor="let producto of productos"> 
-  <ion-modal  #modal trigger={{producto.id}} [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
-  <ng-template>
-    <ion-content>
-    
-      <img style="position:center; " src={{producto.imagengrupo}}>
-     
-      
-    <h5 style="position:relative; top:20px; left:23px;"> {{producto.nombre}} </h5>
-    <h8 style="color:grey; position: relative;top:40px;left: 23px; ;"> {{producto.descripcion}} </h8>
-    <h5 style="position:relative; top:60px; left:23px;"> ARS ${{producto.precio}}</h5> 
-    <ion-fab vertical= "center" horizontal="end" slot="fixed">
-      <ion-fab-button>
-        <ion-icon name="cart-outline"></ion-icon>
-      </ion-fab-button>
-      
-      
-      
-    </ion-fab>
-  
-    </ion-content>
- </ng-template>
-
-
- </ion-modal>
-</div>
 
  
 
@@ -97,77 +71,88 @@
   </div>
 
 
-
-
-
-
   <div style="position:relative; left:32px">
     <h5> Best Sellers </h5>
   </div>
 
-  
- 
-
   <div style="position:relative; left:0px"> 
     
-      <img id="open-modal7" expand="block" src="../../assets/fotos/Frame 8.png"
+    <img  
+    *ngFor="let producto of BestSeller"
+      src={{producto.imagen}}
       width="45%"
       height="45%"
-      >
+      alt={{producto.nombre}}
+      id={{producto.nombre}} 
+      expand="block"
+    />
 
-      
-      <img id="open-modal8" expand="block" src="../../assets/fotos/Frame 9.png"
-      width="45%"
-      height="45%"
-      >
-  
-      
-      <img id="open-modal9" expand="block" src="../../assets/fotos/Frame 10.png"
-      width="45%"
-      height="45%"
-      >
+ </div>
 
-      <img id="open-modal10" expand="block" src="../../assets/fotos/Frame 11.png"
-      width="45%"
-      height="45%"
-      >
-  
-   </div>
-
-   <ion-modal  #modal trigger="open-modal7" [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
-
-  </ion-modal>
-
-  <ion-modal  #modal trigger="open-modal8" [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
-
-  </ion-modal>
-
-  <ion-modal  #modal trigger="open-modal9" [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
-
-  </ion-modal>
-  
-  <ion-modal  #modal trigger="open-modal10" [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
-
-  </ion-modal>
-
-
-  
   <div style="position:relative; left:32px">
     <h5> Last Drop from Baru Bags </h5>
   </div>
   
   <div style="position:relative; left:20px"> 
     
-    
-
-    <img src="../../assets/fotos/image 18.png"
-    width="90%"
-    height="100%"
-    >
-
+    <a href="https://drive.google.com/file/d/1j2vlqPxWtpe2UHoXGifU0Sw_-n7mwaKk/view" target="_blank" >
+      <img src="../../assets/fotos/image 18.png"
+      width="90%"
+      height="100%"
+      >
+    </a>
     
 
   </div>
+
+  <div *ngFor="let producto of productos"> 
+    <ion-modal  #modal trigger={{producto.id}} [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
+    <ng-template>
+      <ion-content>
+      
+        <img id="imgmodals" src={{producto.imagengrupo}}>
+       
+        
+      <h4 style="position:absolute; top:340px; left:23px;"> {{producto.nombre}} </h4>
+      <h8 style="color:grey; position: absolute;top:390px;left: 23px; ;"> {{producto.descripcion}} </h8>
+      <h6 style="position:absolute; top:420px; left:23px;"> ARS ${{producto.precio}}</h6> 
+      <ion-fab vertical= "center" horizontal="end" slot="fixed">
+        <ion-fab-button id="fabmodalscart">
+          <ion-icon name="cart-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button id="fabmodalsfav">
+          <ion-icon name="heart-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+      </ion-content>
+   </ng-template>
+   </ion-modal>
+  </div> 
+
+  <div *ngFor="let producto of productos"> 
+    <ion-modal  #modal trigger={{producto.nombre}} [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75, 0.90]">
+    <ng-template>
+      <ion-content>
+      
+        <img id="imgmodals" src={{producto.imagengrupo}}>
+       
+        
+        <h4 style="position:absolute; top:340px; left:23px;"> {{producto.nombre}} </h4>
+        <h8 style="color:grey; position: absolute;top:390px;left: 23px; ;"> {{producto.descripcion}} </h8>
+        <h6 style="position:absolute; top:420px; left:23px;"> ARS ${{producto.precio}}</h6> 
+      
+      <ion-fab vertical= "center" horizontal="end" slot="fixed">
+        <ion-fab-button id="fabmodalscart">
+          <ion-icon name="cart-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button id="fabmodalsfav">
+          <ion-icon name="heart-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+      </ion-content>
+   </ng-template>
+   </ion-modal>
+  </div> 
   
   
   <h1> </h1>
