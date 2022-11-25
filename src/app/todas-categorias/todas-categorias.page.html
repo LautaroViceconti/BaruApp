@@ -1,9 +1,39 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>todasCategorias</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
 
+  <div style="position:relative; left:17px; top:20px;"> 
+    
+    <img *ngFor="let producto of favorito"
+
+      src={{producto.imagen}}
+      width="45%"
+      height="45%"
+      alt={{producto.nombre}}
+      
+      
+    />
+
+
+ </div>
+
+ 
+
+
 </ion-content>
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button [routerLink]="['/tabs/tab1']" tab="tab1">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/tabs/tab2']" tab="tab2">
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/tabs/tab3']" tab="tab3">
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

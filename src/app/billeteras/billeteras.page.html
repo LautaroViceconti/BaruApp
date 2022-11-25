@@ -14,17 +14,20 @@
       <ion-card 
       *ngFor="let producto of billetera"
       style="position:relative; top:20px">
-        <ion-card-content>
-          <ion-list>
-            <ion-item>
-              <ion-thumbnail slot="start">
-                <img alt={{producto.nombre}} src={{producto.imagengrupo}} />
-              </ion-thumbnail>
-              <ion-label>{{producto.nombre}}</ion-label>
-            </ion-item>
-          </ion-list>
-        </ion-card-content>
-      </ion-card>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img id="cartimage" alt={{producto.nombre}} src={{producto.imagengrupo}} />
+            </ion-thumbnail>
+            <ion-label>{{producto.nombre}}
+              &nbsp;&nbsp;&nbsp;&nbsp;${{producto.precio}}</ion-label>
+            
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+     
       
     </div>
   

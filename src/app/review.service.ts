@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
-export class ProductosService {
-  
+export class ReviewService {
+
   constructor(private http: HttpClient) { }
 
-  async getProductos(){ 
-    const res = await fetch("http://localhost:8080/producto")
+  async getUsuarios(){ 
+    const res = await fetch("http://localhost:8080/usuario")
     const resjson = (await res).json()
     return resjson
   }
@@ -17,6 +18,4 @@ export class ProductosService {
   public post(url:string, body){ 
     return this.http.post(url,body)
   }
-
- 
 }

@@ -13,9 +13,11 @@
           <ion-list>
             <ion-item>
               <ion-thumbnail slot="start">
-                <img alt={{producto.nombre}} src={{producto.imagengrupo}} />
+                <img id="cartimage" alt={{producto.nombre}} src={{producto.imagengrupo}} />
               </ion-thumbnail>
-              <ion-label>{{producto.nombre}}</ion-label>
+              <ion-label>{{producto.nombre}}
+                &nbsp;&nbsp;&nbsp;&nbsp;${{producto.precio}}</ion-label>
+              
             </ion-item>
           </ion-list>
         </ion-card-content>

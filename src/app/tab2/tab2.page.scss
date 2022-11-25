@@ -1,13 +1,14 @@
 #fabmodalsfav {
   
   position: relative;
-  top:-59px;
+  top:-280px;
   left: -285px;
 }
 
 #fabmodalscart {
   
   position: relative;
+  top:-225px;
   left: -25px;
 }
 
@@ -19,13 +20,3 @@
   left: 35px;
 }
 
-ion-modal {
-  --height: 50%;
-  --border-radius: 16px;
-  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
-
-ion-modal::part(backdrop) {
-  background: rgba(209, 213, 219);
-  opacity: 1;
-}

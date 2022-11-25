@@ -23,8 +23,16 @@
     <img src="../../assets/fotos/Framecolection4.png">
     
   </div>
-  
-  
+ 
+  <div>
+    <form [formGroup]="form" (submit)="enviarData()" >
+      <div for="commentArea" class="title-comment"> Comentar </div>
+      <textarea class="text-comment" id="commentArea" rows="8"></textarea>
+      <div>
+        <button> Enviar </button>
+      </div>
+    </form>
+  </div>
   
 
 

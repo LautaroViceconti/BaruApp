@@ -33,7 +33,7 @@
      </div>
 
      <div *ngFor="let producto of productos"> 
-      <ion-modal  #modal trigger={{producto.imagen}} >
+      <ion-modal  #modal trigger={{producto.imagen}} [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75]" >
       <ng-template>
         <ion-content>
           <img id="imgmodals" src={{producto.imagengrupo}}>
