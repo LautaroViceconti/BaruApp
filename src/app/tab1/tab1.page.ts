@@ -93,11 +93,19 @@ export class Tab1Page implements OnInit {
 
     
     public enviarData(){
-      this.productoService.post('http://localhost:8080/usuario',
+      this.productoService.post('http://localhost:8080/producto',
       {
-        
+        id: 1,
       nombre: "Riñonera Smith",
-      }
+      color: "Negro",
+      precio: 8000.0,
+      descripcion: "Ideal para todos los días",
+      categoria: "Rinonera",
+      imagen: "http://localhost:8100/assets/fotos/Frame%201.png",
+      imagengrupo: "http://localhost:8100/assets/fotos/imagen1.png",
+      nuevo: true,
+      bestSellers: false,
+      favorito: true}
       )
       .subscribe(respuesta=>{ 
         console.log('Favorito Agregado!!!')

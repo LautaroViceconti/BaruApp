@@ -1,5 +1,5 @@
 
-<ion-content>
+<ion-content >
 
   <ion-fab (click)="onClick()" vertical="top" horizontal="end" slot="fixed">
     <ion-fab-button>
@@ -13,27 +13,43 @@
     </ion-fab-button>  
   </ion-fab>
 
- 
+  
     <img src="../../assets/fotos/colection.jpeg">
 
-  <div style="position:relative; top:15px" > 
-    <img src="../../assets/fotos/Framecolection1.png">
-    <img src="../../assets/fotos/Framecolection2.png">
-    <img src="../../assets/fotos/Framecolection3.png">
-    <img src="../../assets/fotos/Framecolection4.png">
-    
-  </div>
+  
+
+    <div> 
+      <ion-card 
+      *ngFor="let usuario of usuarios"
+      style="position:relative; top:20px">
+      <ion-card-header>
+        <ion-card-subtitle style="color:black">{{usuario.email}}</ion-card-subtitle>
+        &nbsp;
+        <ion-card-subtitle style="color:grey">{{usuario.nombre}}</ion-card-subtitle>
+      </ion-card-header>  
+      <ion-card-content>
+        
+        </ion-card-content>
+      </ion-card>
+      
+    </div>
+
  
+  
+  
+<footer> 
   <div>
-    <form [formGroup]="form" (submit)="enviarData()" >
-      <div for="commentArea" class="title-comment"> Comentar </div>
-      <textarea class="text-comment" id="commentArea" rows="8"></textarea>
+    <form [formGroup]="form" (submit)="enviarData()">
+      <div class="form-group">
+        <div for="commentArea"></div>
+      <textarea formControlName="textAreaComentario" class="text-comment" id="commentArea" rows="8"></textarea>
+      </div>
       <div>
-        <button> Enviar </button>
+        <ion-button fill="clear" color="medium" (click)="enviarData()"> Enviar </ion-button>
       </div>
     </form>
   </div>
-  
-
+</footer>
+ 
 
 </ion-content>

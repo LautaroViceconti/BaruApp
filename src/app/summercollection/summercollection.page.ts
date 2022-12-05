@@ -18,11 +18,15 @@ export class SummercollectionPage implements OnInit {
 
   constructor(private menuCtrl:MenuController, private productoService: ProductosService, private formBuilder: FormBuilder, private reviewService: ReviewService) {}
 
+  usuarios = []
+
   ngOnInit() {
     this.form = this.formBuilder.group({
       textAreaComentario: ['']
       
-    }
+      
+    },
+    this.getUsuarios()
 
     );
   }
@@ -32,15 +36,25 @@ export class SummercollectionPage implements OnInit {
     this.menuCtrl.toggle()
   }
 
+
+  async getUsuarios(){
+    this.usuarios = await this.reviewService.getUsuarios();
+     console.table(this.usuarios);
+     
+    }
+
   public enviarData(){
-    this.productoService.post('http://localhost:8080/usuario/',
+    this.reviewService.post('http://localhost:8080/usuario/',
     {
-      nombre:"Lauti"
+      email:"Lautaro Viceconti",
+      nombre: this.form.value.textAreaComentario,
+      prioridad: 10
       }
     )
     .subscribe(respuesta=>{ 
       console.log('Comentario!!!')
-      
+      this.getUsuarios();
+      this.form.reset();
     })
   }
 

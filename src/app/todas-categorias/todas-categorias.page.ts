@@ -23,9 +23,8 @@ export class TodasCategoriasPage implements OnInit {
   async getProductos(){
     this.productos = await this.productoService.getProductos();
      console.table(this.productos);
-     this.favorito = this.getFavorito();
+     this.favorito=this.getFavorito();
     }
-
 
     getFavorito(){ 
       return this.productos.filter((producto)=>producto.favorito === true)
